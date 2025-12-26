@@ -1,0 +1,398 @@
+/* ===============================
+   GENERAL APP
+================================ */
+.App {
+  min-height: 100vh;
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================ */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+h1 {
+  font-weight: 700;
+  color: #f8fafc;;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Заголовки страниц (кроме hero и светлых секций) */
+.page-title,
+.page-header h1,
+.page-header h2 {
+  color: #f8fafc;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero-section {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-weight: 800;
+}
+
+.hero-section p {
+  color: rgba(255,255,255,0.85);
+}
+
+/* ===============================
+   LIGHT SECTIONS ON HOME PAGE
+================================ */
+
+/* Общий светлый контейнер */
+.light-section {
+  background: rgba(255, 255, 255, 0.92);
+  color: #212529;
+}
+
+.light-section h1,
+.light-section h2,
+.light-section h3,
+.light-section h4 {
+  color: #212529;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(99,102,241,0.25);
+}
+
+/* Карточки мероприятий */
+.event-card {
+  height: 100%;
+}
+
+/* Карточки категорий */
+.category-card {
+  cursor: pointer;
+  text-align: center;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Primary */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Outline */
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* ===============================
+   BADGES
+================================ */
+.badge.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+  background: rgba(15, 23, 42, 0.85) !important; /* тёмный, не синий */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* ===============================
+   FORMS
+================================ */
+.form-control {
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(99,102,241,0.25);
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   FAVORITES
+================================ */
+.favorite-card {
+  border: 2px solid #ff6b6b;
+}
+
+.favorite-card:hover {
+  box-shadow: 0 20px 40px rgba(255,107,107,0.35);
+}
+
+/* ===============================
+   ABOUT PAGE HEADER
+================================ */
+.about-header {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-lg {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Общий вертикальный ритм секций */
+.section {
+  margin-bottom: 4rem;
+}
+
+/* Заголовки секций */
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+/* Карточки в сетках */
+.row > [class*="col-"] {
+  margin-bottom: 1.5rem;
+}
+
+/* Текст внутри карточек */
+.card-body > *:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+/* Кнопки */
+.card .btn {
+  margin-top: 0.75rem;
+}
+
+/* Карточки мероприятий */
+.event-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Карточки категорий */
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(34, 197, 94, 0.35);
+}
+
+/* Все карточки — курсор */
+.card {
+  cursor: default;
+}
+
+.card a,
+.card button {
+  cursor: pointer;
+}
+
+/* Кнопки */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Outline кнопки */
+.btn-outline-primary:hover {
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+/* Избранное ❤️ */
+button.btn-sm {
+  transition: transform 0.15s ease;
+}
+
+button.btn-sm:hover {
+  transform: scale(1.15);
+}
+
+/* Ссылки */
+a {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  text-shadow: 0 2px 8px rgba(99, 102, 241, 0.6);
+}
+
+@media (max-width: 992px) {
+  /* Hero */
+  .hero-section {
+    padding: 3rem 2rem;
+    border-radius: 18px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero-section {
+    padding: 2.5rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  /* Карточки */
+  .card {
+    border-radius: 14px;
+  }
+
+  /* Кнопки — удобнее для пальцев */
+  .btn {
+    padding: 0.6rem 1.1rem;
+  }
+
+  .btn-sm {
+    padding: 0.45rem 0.75rem;
+  }
+
+  /* Категории */
+  .category-card h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Hero */
+  .hero-section {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  /* Заголовки секций */
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Карточки */
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  /* Центрирование текста */
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+.btn-outline-primary:hover {
+  box-shadow: 0 8px 20px rgba(99,102,241,0.35);
+}
+
+.btn-danger:hover {
+  box-shadow: 0 8px 20px rgba(239,68,68,0.35);
+}
+
+
+
